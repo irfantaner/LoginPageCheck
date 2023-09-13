@@ -20,8 +20,8 @@ var (
 	loginPages = make(map[string]bool)
 )
 
-func createTigerArt() {
-	tiger := `
+func createBanner() {
+	banner := `
 	██╗      ██████╗  ██████╗ ██╗███╗   ██╗    ██████╗  █████╗  ██████╗ ███████╗     ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗
 	██║     ██╔═══██╗██╔════╝ ██║████╗  ██║    ██╔══██╗██╔══██╗██╔════╝ ██╔════╝    ██╔════╝██║  ██║██╔════╝██╔════╝██║ ██╔╝
 	██║     ██║   ██║██║  ███╗██║██╔██╗ ██║    ██████╔╝███████║██║  ███╗█████╗      ██║     ███████║█████╗  ██║     █████╔╝ 
@@ -43,7 +43,7 @@ func createTigerArt() {
 															 
 																															
     `
-	fmt.Println(tiger)
+	fmt.Println(banner)
 }
 func crawl(url string) {
 	defer wg.Done()
@@ -106,7 +106,7 @@ func showProgress() {
 }
 
 func main() {
-	createTigerArt()
+	createBanner()
 	fmt.Print("Hedef URL: ")
 	reader := bufio.NewReader(os.Stdin)
 	targetURL, _ = reader.ReadString('\n')
